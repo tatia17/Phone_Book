@@ -1,0 +1,45 @@
+<!-- index.html -->
+    <!DOCTYPE html>
+      <html ng-app="scotchApp">
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="app/app.js"></script>
+      <script src="app/controller/loginController.js?v=1.0.0.1"></script>
+       <script src="app/controller/mainController.js?v=1.0.0.1"></script>
+      <link rel="stylesheet" type="text/css" href="style/myStyle.css">
+           
+    </head>
+    <body ng-controller="mainController"  id="homePage">
+       <header>
+            <nav class="navbar navbar-default">
+            <div class="container">
+     
+
+                <ul class="nav navbar-nav navbar-right" id="homeHeader">
+              
+                
+                    <li onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><a href="#login"><i class="fa fa-home"></i> Login</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> Registration</a></li>
+        
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+      <div id="main">
+
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+
+    </div>
+
+    </html>
